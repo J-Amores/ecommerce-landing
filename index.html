@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Sneaker Company | Fall Limited Edition Sneakers</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <div class="header__left">
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </button>
+        <a href="#" class="logo">
+          <img src="images/logo.svg" alt="Sneaker Company">
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Collections</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Men</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Women</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__right">
+        <button class="cart-toggle" aria-label="Toggle cart" aria-expanded="false">
+          <div class="cart-toggle__icon">
+            <img src="images/icon-cart.svg" alt="Cart">
+            <span class="cart-toggle__count">0</span>
+          </div>
+        </button>
+        <a href="#" class="avatar">
+          <img src="images/image-avatar.png" alt="User avatar">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="cart-dropdown">
+    <div class="cart-dropdown__header">
+      <h3 class="cart-dropdown__title">Cart</h3>
+    </div>
+    <div class="cart-dropdown__content">
+      <div class="cart-dropdown__empty">
+        <p>Your cart is empty.</p>
+      </div>
+      <div class="cart-dropdown__filled hidden">
+        <div class="cart-item">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Product thumbnail" class="cart-item__thumbnail">
+          <div class="cart-item__details">
+            <p class="cart-item__name">Fall Limited Edition Sneakers</p>
+            <p class="cart-item__price">$125.00 x <span class="cart-item__quantity">3</span> <span class="cart-item__total">$375.00</span></p>
+          </div>
+          <button class="cart-item__delete" aria-label="Delete item">
+            <img src="images/icon-delete.svg" alt="Delete">
+          </button>
+        </div>
+        <button class="btn btn--primary btn--full-width">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay hidden"></div>
+
+  <main class="main">
+    <div class="container product">
+      <div class="product__gallery">
+        <div class="product__main-image">
+          <button class="gallery-control gallery-control--prev" aria-label="Previous image">
+            <img src="images/icon-previous.svg" alt="Previous">
+          </button>
+          <div class="product__image-container">
+            <img src="images/image-product-1.jpg" alt="Fall Limited Edition Sneakers" class="product__image" id="main-product-image">
+          </div>
+          <button class="gallery-control gallery-control--next" aria-label="Next image">
+            <img src="images/icon-next.svg" alt="Next">
+          </button>
+        </div>
+        <div class="product__thumbnails">
+          <button class="product__thumbnail-btn active" data-image="images/image-product-1.jpg">
+            <img src="images/image-product-1-thumbnail.jpg" alt="Product thumbnail 1" class="product__thumbnail">
+          </button>
+          <button class="product__thumbnail-btn" data-image="images/image-product-2.jpg">
+            <img src="images/image-product-2-thumbnail.jpg" alt="Product thumbnail 2" class="product__thumbnail">
+          </button>
+          <button class="product__thumbnail-btn" data-image="images/image-product-3.jpg">
+            <img src="images/image-product-3-thumbnail.jpg" alt="Product thumbnail 3" class="product__thumbnail">
+          </button>
+          <button class="product__thumbnail-btn" data-image="images/image-product-4.jpg">
+            <img src="images/image-product-4-thumbnail.jpg" alt="Product thumbnail 4" class="product__thumbnail">
+          </button>
+        </div>
+      </div>
+
+      <div class="product__details">
+        <p class="product__company">Sneaker Company</p>
+        <h1 class="product__title">Fall Limited Edition Sneakers</h1>
+        <p class="product__description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they'll withstand everything the weather can offer.
+        </p>
+        <div class="product__price-container">
+          <div class="product__price-current">
+            <span class="product__price">$125.00</span>
+            <span class="product__discount">50%</span>
+          </div>
+          <p class="product__price-original">$250.00</p>
+        </div>
+        <div class="product__actions">
+          <div class="quantity-selector">
+            <button class="quantity-selector__btn quantity-selector__btn--minus" aria-label="Decrease quantity">
+              <img src="images/icon-minus.svg" alt="Minus">
+            </button>
+            <input type="number" class="quantity-selector__input" value="0" min="0" aria-label="Quantity">
+            <button class="quantity-selector__btn quantity-selector__btn--plus" aria-label="Increase quantity">
+              <img src="images/icon-plus.svg" alt="Plus">
+            </button>
+          </div>
+          <button class="btn btn--primary btn--with-icon add-to-cart-btn">
+            <img src="images/icon-cart.svg" alt="Cart" class="btn__icon">
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="lightbox hidden">
+    <button class="lightbox__close" aria-label="Close lightbox">
+      <img src="images/icon-close.svg" alt="Close">
+    </button>
+    <div class="lightbox__content">
+      <div class="lightbox__main-image">
+        <button class="gallery-control gallery-control--prev" aria-label="Previous image">
+          <img src="images/icon-previous.svg" alt="Previous">
+        </button>
+        <div class="lightbox__image-container">
+          <img src="images/image-product-1.jpg" alt="Fall Limited Edition Sneakers" class="lightbox__image">
+        </div>
+        <button class="gallery-control gallery-control--next" aria-label="Next image">
+          <img src="images/icon-next.svg" alt="Next">
+        </button>
+      </div>
+      <div class="lightbox__thumbnails">
+        <button class="lightbox__thumbnail-btn active" data-image="images/image-product-1.jpg">
+          <img src="images/image-product-1-thumbnail.jpg" alt="Product thumbnail 1" class="lightbox__thumbnail">
+        </button>
+        <button class="lightbox__thumbnail-btn" data-image="images/image-product-2.jpg">
+          <img src="images/image-product-2-thumbnail.jpg" alt="Product thumbnail 2" class="lightbox__thumbnail">
+        </button>
+        <button class="lightbox__thumbnail-btn" data-image="images/image-product-3.jpg">
+          <img src="images/image-product-3-thumbnail.jpg" alt="Product thumbnail 3" class="lightbox__thumbnail">
+        </button>
+        <button class="lightbox__thumbnail-btn" data-image="images/image-product-4.jpg">
+          <img src="images/image-product-4-thumbnail.jpg" alt="Product thumbnail 4" class="lightbox__thumbnail">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
